@@ -1,0 +1,1068 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  min-height: 100%;
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: #050b10;
+  color: white;
+}
+
+/* =================================
+   LOGIN PAGE
+================================= */
+
+.login-page {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 30px;
+  background:
+    radial-gradient(
+      circle at 50% 45%,
+      rgba(0, 255, 200, 0.09),
+      transparent 38%
+    ),
+    radial-gradient(
+      circle at 10% 10%,
+      rgba(0, 255, 200, 0.04),
+      transparent 30%
+    ),
+    #050b10;
+}
+
+/* spacious login container */
+
+.login-box {
+  width: min(460px, 100%);
+  padding: 52px 50px 45px;
+  background: rgba(5, 18, 25, 0.97);
+  border: 1px solid rgba(0, 255, 200, 0.25);
+  border-radius: 14px;
+  position: relative;
+  box-shadow:
+    0 0 45px rgba(0, 255, 200, 0.08),
+    inset 0 0 30px rgba(0, 255, 200, 0.015);
+}
+
+/* top glowing line */
+
+.login-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 12%;
+  width: 76%;
+  height: 2px;
+  background: #00ffc8;
+  box-shadow: 0 0 15px rgba(0, 255, 200, 0.8);
+}
+
+/* RS circle */
+
+.login-logo {
+  width: 76px;
+  height: 76px;
+  margin: 0 auto 28px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #00ffc8;
+  border-radius: 50%;
+
+  color: #00ffc8;
+  font-size: 24px;
+  font-weight: bold;
+
+  box-shadow:
+    0 0 15px rgba(0, 255, 200, 0.25),
+    inset 0 0 15px rgba(0, 255, 200, 0.05);
+}
+
+/* title */
+
+.login-box h1 {
+  margin: 0;
+
+  text-align: center;
+
+  color: #ffffff;
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+/* subtitle */
+
+.login-subtitle {
+  margin: 12px 0 25px;
+
+  text-align: center;
+
+  color: #789197;
+  font-size: 11px;
+  line-height: 1.7;
+  letter-spacing: 1px;
+}
+
+/* online status */
+
+.login-status {
+  width: fit-content;
+  margin: 0 auto 35px;
+  padding: 8px 14px;
+
+  border: 1px solid rgba(0, 255, 200, 0.18);
+  border-radius: 20px;
+
+  color: #00ffc8;
+  background: rgba(0, 255, 200, 0.035);
+
+  font-size: 10px;
+  font-weight: bold;
+  letter-spacing: 0.8px;
+}
+
+/* form */
+
+.login-box form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* labels */
+
+.login-box label {
+  margin-top: 12px;
+
+  color: #789197;
+  font-size: 10px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* inputs */
+
+.login-box input {
+  width: 100%;
+  height: 50px;
+
+  padding: 0 16px;
+
+  border: 1px solid rgba(0, 255, 200, 0.16);
+  border-radius: 7px;
+
+  outline: none;
+
+  background: #07141b;
+  color: #ffffff;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+
+  transition: 0.2s;
+}
+
+.login-box input::placeholder {
+  color: #4f666c;
+}
+
+.login-box input:focus {
+  border-color: #00ffc8;
+
+  box-shadow:
+    0 0 15px rgba(0, 255, 200, 0.12);
+}
+
+/* login button */
+
+.login-box button {
+  width: 100%;
+  height: 50px;
+
+  margin-top: 22px;
+
+  border: 1px solid #00ffc8;
+  border-radius: 7px;
+
+  background: rgba(0, 255, 200, 0.08);
+  color: #00ffc8;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1px;
+
+  cursor: pointer;
+
+  transition: 0.25s;
+}
+
+.login-box button:hover {
+  background: #00ffc8;
+  color: #041014;
+
+  box-shadow:
+    0 0 25px rgba(0, 255, 200, 0.35);
+}
+
+/* error */
+
+.login-error {
+  margin-top: 12px;
+  padding: 11px;
+
+  border: 1px solid rgba(255, 90, 90, 0.3);
+  border-radius: 6px;
+
+  background: rgba(255, 90, 90, 0.06);
+  color: #ff8585;
+
+  text-align: center;
+  font-size: 11px;
+}
+
+/* footer */
+
+.login-footer {
+  margin-top: 35px;
+  padding-top: 20px;
+
+  border-top: 1px solid rgba(0, 255, 200, 0.08);
+
+  color: #4f666c;
+
+  text-align: center;
+  font-size: 9px;
+  letter-spacing: 1px;
+}
+
+/* =================================
+   MAIN APP
+================================= */
+
+.app {
+  min-height: 100vh;
+  background:
+    radial-gradient(
+      circle at 20% 0%,
+      rgba(0, 255, 200, 0.035),
+      transparent 30%
+    ),
+    #050b10;
+}
+
+/* =================================
+   NAVIGATION
+================================= */
+
+.top-nav {
+  min-height: 70px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 35px;
+
+  background: rgba(4, 13, 18, 0.97);
+
+  border-bottom: 1px solid rgba(0, 255, 200, 0.12);
+}
+
+.logo {
+  color: #00ffc8;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.nav-buttons {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.nav-buttons button {
+  padding: 9px 12px;
+
+  border: 1px solid transparent;
+  border-radius: 5px;
+
+  background: transparent;
+  color: #789197;
+
+  font-size: 9px;
+  font-weight: bold;
+
+  cursor: pointer;
+}
+
+.nav-buttons button:hover,
+.nav-buttons button.active {
+  color: #00ffc8;
+  border-color: rgba(0, 255, 200, 0.2);
+  background: rgba(0, 255, 200, 0.04);
+}
+
+.logout-button {
+  color: #ff8585 !important;
+}
+
+/* =================================
+   RESPONSIVE LOGIN
+================================= */
+
+@media (max-width: 600px) {
+  .login-page {
+    padding: 25px 18px;
+  }
+
+  .login-box {
+    padding: 40px 25px 35px;
+  }
+
+  .login-box h1 {
+    font-size: 25px;
+  }
+}
+/* =====================================================
+   HOME + ACCOUNT LAYOUT
+===================================================== */
+
+.home-main-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 290px;
+  gap: 22px;
+  align-items: start;
+}
+
+.home-dashboard-content {
+  min-width: 0;
+}
+
+/* =====================================================
+   ACCOUNT PANEL
+===================================================== */
+
+.account-panel {
+  position: sticky;
+  top: 90px;
+  padding: 22px;
+  background: rgba(5, 18, 25, 0.97);
+  border: 1px solid rgba(0, 255, 200, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow:
+    0 0 25px rgba(0, 255, 200, 0.06),
+    inset 0 0 25px rgba(0, 255, 200, 0.015);
+}
+
+.account-panel::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 10%;
+  width: 80%;
+  height: 2px;
+  background: #00ffc8;
+  box-shadow: 0 0 12px rgba(0, 255, 200, 0.7);
+}
+
+.account-panel-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgba(0, 255, 200, 0.1);
+}
+
+.account-label {
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.account-online {
+  color: #00ffc8;
+  font-size: 8px;
+  font-weight: 700;
+}
+
+.account-avatar {
+  width: 72px;
+  height: 72px;
+  margin: 25px auto 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #00ffc8;
+  border-radius: 50%;
+
+  color: #00ffc8;
+  background: rgba(0, 255, 200, 0.05);
+
+  font-size: 25px;
+  font-weight: 700;
+
+  box-shadow:
+    0 0 18px rgba(0, 255, 200, 0.2),
+    inset 0 0 15px rgba(0, 255, 200, 0.05);
+}
+
+.account-name {
+  margin: 0;
+  color: #ffffff;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 700;
+
+  word-break: break-word;
+}
+
+.account-role {
+  margin: 7px 0 15px;
+  color: #60777d;
+  text-align: center;
+  font-size: 8px;
+  letter-spacing: 1px;
+}
+
+.account-status {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+
+  padding: 8px;
+
+  color: #00ffc8;
+  background: rgba(0, 255, 200, 0.04);
+  border: 1px solid rgba(0, 255, 200, 0.12);
+  border-radius: 5px;
+
+  font-size: 9px;
+  font-weight: 700;
+}
+
+.account-status span {
+  text-shadow: 0 0 8px #00ffc8;
+}
+
+.account-divider {
+  height: 1px;
+  margin: 20px 0;
+
+  background: rgba(0, 255, 200, 0.1);
+}
+
+.account-info {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.account-info > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.account-info span {
+  color: #60777d;
+  font-size: 8px;
+}
+
+.account-info strong {
+  max-width: 150px;
+  overflow: hidden;
+  color: #dffefe;
+  font-size: 10px;
+  text-align: right;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.account-logout {
+  width: 100%;
+  margin-top: 22px;
+
+  padding: 10px;
+
+  color: #ff7777;
+  background: rgba(255, 80, 80, 0.04);
+  border: 1px solid rgba(255, 80, 80, 0.25);
+  border-radius: 5px;
+
+  font-size: 9px;
+  font-weight: 700;
+
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.account-logout:hover {
+  color: #ffffff;
+  background: rgba(255, 80, 80, 0.15);
+  border-color: #ff7777;
+  box-shadow: 0 0 15px rgba(255, 80, 80, 0.15);
+}
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 1100px) {
+  .home-main-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .account-panel {
+    position: relative;
+    top: auto;
+    width: 100%;
+  }
+
+  .account-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 650px) {
+  .home-main-layout {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .account-panel {
+    width: 100%;
+  }
+
+  .account-info {
+    grid-template-columns: 1fr;
+  }
+}
+/* =====================================================
+   DRIVER SCANNING OVERLAY
+===================================================== */
+
+.driver-scan-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 25px;
+
+  background: rgba(2, 8, 12, 0.86);
+
+  backdrop-filter: blur(7px);
+}
+
+/* scan window */
+
+.driver-scan-modal {
+  width: min(440px, 100%);
+  padding: 35px 30px;
+
+  position: relative;
+  overflow: hidden;
+
+  text-align: center;
+
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(0, 255, 200, 0.08),
+      transparent 55%
+    ),
+    #06131a;
+
+  border: 1px solid rgba(0, 255, 200, 0.4);
+  border-radius: 10px;
+
+  box-shadow:
+    0 0 45px rgba(0, 255, 200, 0.15),
+    inset 0 0 30px rgba(0, 255, 200, 0.025);
+}
+
+/* glowing top line */
+
+.driver-scan-modal::before {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: 8%;
+
+  width: 84%;
+  height: 2px;
+
+  background: #00ffc8;
+
+  box-shadow:
+    0 0 15px #00ffc8;
+}
+
+/* corners */
+
+.scan-corner {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+
+  border-color: #00ffc8;
+  border-style: solid;
+
+  opacity: 0.8;
+}
+
+.scan-corner.top-left {
+  top: 12px;
+  left: 12px;
+
+  border-width: 2px 0 0 2px;
+}
+
+.scan-corner.top-right {
+  top: 12px;
+  right: 12px;
+
+  border-width: 2px 2px 0 0;
+}
+
+.scan-corner.bottom-left {
+  bottom: 12px;
+  left: 12px;
+
+  border-width: 0 0 2px 2px;
+}
+
+.scan-corner.bottom-right {
+  bottom: 12px;
+  right: 12px;
+
+  border-width: 0 2px 2px 0;
+}
+
+/* title */
+
+.scan-title {
+  color: #00ffc8;
+
+  font-size: 11px;
+  font-weight: bold;
+
+  letter-spacing: 2px;
+
+  margin-bottom: 22px;
+}
+
+/* scanner visual */
+
+.scan-visual {
+  width: 190px;
+  height: 190px;
+
+  margin: 0 auto 22px;
+
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid
+    rgba(0, 255, 200, 0.22);
+
+  background:
+    linear-gradient(
+      rgba(0, 255, 200, 0.035) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(0, 255, 200, 0.035) 1px,
+      transparent 1px
+    );
+
+  background-size: 20px 20px;
+}
+
+/* driver icon */
+
+.scan-avatar {
+  width: 70px;
+  height: 70px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #00ffc8;
+  border-radius: 50%;
+
+  color: #00ffc8;
+
+  font-size: 28px;
+
+  box-shadow:
+    0 0 25px
+      rgba(0, 255, 200, 0.35),
+    inset 0 0 20px
+      rgba(0, 255, 200, 0.08);
+
+  z-index: 2;
+}
+
+/* rotating scanner rings */
+
+.scan-ring {
+  position: absolute;
+
+  border: 1px solid
+    rgba(0, 255, 200, 0.35);
+
+  border-radius: 50%;
+}
+
+.ring-one {
+  width: 110px;
+  height: 110px;
+
+  animation:
+    scanRotate 3s linear infinite;
+}
+
+.ring-two {
+  width: 155px;
+  height: 155px;
+
+  border-style: dashed;
+
+  animation:
+    scanRotateReverse 4s linear infinite;
+}
+
+@keyframes scanRotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes scanRotateReverse {
+  from {
+    transform: rotate(360deg);
+  }
+
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+/* horizontal scanner line */
+
+.scan-line {
+  position: absolute;
+
+  left: 8px;
+  right: 8px;
+
+  height: 2px;
+
+  background: #00ffc8;
+
+  box-shadow:
+    0 0 12px #00ffc8,
+    0 0 25px
+      rgba(0, 255, 200, 0.7);
+
+  z-index: 5;
+
+  animation:
+    scanMove 1.5s ease-in-out infinite;
+}
+
+@keyframes scanMove {
+  0% {
+    top: 10%;
+    opacity: 0.4;
+  }
+
+  50% {
+    top: 90%;
+    opacity: 1;
+  }
+
+  100% {
+    top: 10%;
+    opacity: 0.4;
+  }
+}
+
+/* scan grid */
+
+.scan-grid {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      rgba(0, 255, 200, 0.05) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(0, 255, 200, 0.05) 1px,
+      transparent 1px
+    );
+
+  background-size: 15px 15px;
+
+  pointer-events: none;
+}
+
+/* driver name */
+
+.driver-scan-modal h2 {
+  margin: 8px 0;
+
+  color: #ffffff;
+
+  font-size: 20px;
+}
+
+/* scanning text */
+
+.scan-status-text {
+  margin: 8px 0 18px;
+
+  color: #688389;
+
+  font-size: 10px;
+
+  letter-spacing: 1px;
+}
+
+/* progress */
+
+.scan-progress {
+  width: 100%;
+  height: 4px;
+
+  margin: 0 auto 18px;
+
+  overflow: hidden;
+
+  background: #10252c;
+
+  border-radius: 5px;
+}
+
+.scan-progress-bar {
+  width: 30%;
+  height: 100%;
+
+  background: #00ffc8;
+
+  box-shadow:
+    0 0 12px #00ffc8;
+
+  animation:
+    scanProgress 2.1s linear forwards;
+}
+
+@keyframes scanProgress {
+  from {
+    width: 5%;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+/* loading labels */
+
+.scan-details-loading {
+  display: flex;
+  justify-content: space-around;
+
+  color: #4f666c;
+
+  font-size: 8px;
+
+  letter-spacing: 1px;
+}
+
+/* =====================================================
+   SCAN COMPLETE
+===================================================== */
+
+.scan-complete {
+  padding-top: 40px;
+}
+
+.scan-success-icon {
+  width: 65px;
+  height: 65px;
+
+  margin: 0 auto 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #00ffc8;
+  border-radius: 50%;
+
+  color: #041014;
+  background: #00ffc8;
+
+  font-size: 28px;
+  font-weight: bold;
+
+  box-shadow:
+    0 0 25px
+      rgba(0, 255, 200, 0.4);
+}
+
+.scanned-driver-details {
+  margin-top: 25px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  text-align: left;
+}
+
+.scanned-driver-details > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+
+  padding: 12px;
+
+  background: rgba(0, 255, 200, 0.025);
+
+  border: 1px solid
+    rgba(0, 255, 200, 0.1);
+
+  border-radius: 5px;
+}
+
+.scanned-driver-details small {
+  color: #688389;
+
+  font-size: 8px;
+}
+
+.scanned-driver-details strong {
+  max-width: 230px;
+
+  overflow: hidden;
+
+  color: #dffefe;
+
+  font-size: 10px;
+
+  text-align: right;
+
+  text-overflow: ellipsis;
+}
+
+.scanned-driver-details .scan-status {
+  color: #00ffc8;
+}
+
+.scan-verified {
+  margin-top: 18px;
+  padding: 10px;
+
+  color: #00ffc8;
+
+  background: rgba(0, 255, 200, 0.05);
+
+  border: 1px solid
+    rgba(0, 255, 200, 0.2);
+
+  border-radius: 5px;
+
+  font-size: 9px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+.close-scan-button {
+  width: 100%;
+
+  margin-top: 20px;
+  padding: 11px;
+
+  border: 1px solid #00ffc8;
+  border-radius: 5px;
+
+  background: rgba(0, 255, 200, 0.06);
+
+  color: #00ffc8;
+
+  font-size: 10px;
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: 0.25s;
+}
+
+.close-scan-button:hover {
+  background: #00ffc8;
+  color: #041014;
+
+  box-shadow:
+    0 0 18px
+      rgba(0, 255, 200, 0.35);
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+  .driver-scan-overlay {
+    padding: 15px;
+  }
+
+  .driver-scan-modal {
+    padding: 30px 20px;
+  }
+
+  .scan-visual {
+    width: 165px;
+    height: 165px;
+  }
+}
